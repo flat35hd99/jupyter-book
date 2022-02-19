@@ -36,11 +36,11 @@ jobs:
         pyppeteer-install
     - name: Build PDF from HTML (Docs)
       run: |
-        jb build docs --builder pdfhtml -n -W --keep-going
-    - uses: actions/upload-artifact@v2
+        jb build docs
+    - uses: peaceiris/actions-gh-pages@v3
       with:
-        name: PDF_HTML
-        path: docs/_build/pdf/book.pdf
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        path: _build/html
 
   pdflatex:
 
