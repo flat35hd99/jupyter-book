@@ -24,11 +24,9 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
         cache: "pip"
-      run: pip install -r requirements.txt
+    - run: pip install -r requirements.txt
 
-    - name: Build PDF from HTML (Docs)
-      run: |
-        jb build docs
+    - run: jb build docs
 
     - uses: peaceiris/actions-gh-pages@v3
       with:
