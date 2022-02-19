@@ -1,0 +1,2344 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Special content blocks</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/tabs.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
+    <link rel="canonical" href="https://jupyterbook.org/content/content-blocks.html" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="References and cross-references" href="references.html" />
+    <link rel="prev" title="MyST Markdown overview" href="myst.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-52617120-7', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo-wide.svg" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Tutorials
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../start/your-first-book.html">
+   Create your first book
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/overview.html">
+     Overview
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/create.html">
+     Create a template book
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/build.html">
+     Build your book
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/new-file.html">
+     Create your own content file
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/publish.html">
+     Publish your book online
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/example-book.html">
+     Build a small example project
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tutorials/references.html">
+   Get started with references
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Topic Guides
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../basics/organize.html">
+   Structure and organize content
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../customize/toc.html">
+     Structure the Table of Contents
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../structure/configure.html">
+     Configure the Table of Contents
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../file-types/index.html">
+     Types of content source files
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../file-types/markdown.html">
+       Markdown files
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../file-types/notebooks.html">
+       Jupyter Notebook files
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../file-types/myst-notebooks.html">
+       Notebooks written entirely in Markdown
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../file-types/jupytext.html">
+       Custom notebook formats and Jupytext
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../file-types/restructuredtext.html">
+       reStructuredText files
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../basics/create.html">
+     Create books automatically
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../structure/sections-headers.html">
+     How headers and sections map onto to book structure
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
+   Write narrative content
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="myst.html">
+     MyST Markdown overview
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Special content blocks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="references.html">
+     References and cross-references
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="layout.html">
+     Control the page layout
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="citations.html">
+     Citations and bibliographies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="math.html">
+     Math and equations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="proof.html">
+     Proofs, Theorems, and Algorithms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="figures.html">
+     Images and figures
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="metadata.html">
+     Add metadata to your book pages
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="executable/index.html">
+   Write executable content
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="execute.html">
+     Execute and cache your pages
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="code-outputs.html">
+     Formatting code outputs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="executable/output-insert.html">
+     Store code outputs and insert into content
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interactive/interactive.html">
+     Interactive data visualizations
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../basics/building/index.html">
+   Build and publish outputs
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../basics/build.html">
+     Build from the command line
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../publish/web.html">
+     Publish your book on the internet
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../publish/gh-pages.html">
+       GitHub Pages and Actions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../publish/netlify.html">
+       Netlify
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../publish/readthedocs.html">
+       Read the Docs
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advanced/pdf.html">
+     Build a PDF
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../web/index.html">
+   Web and internet features
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../basics/repository.html">
+     Connect your book to a code repository
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interactive/hiding.html">
+     Hide or remove content
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interactive/launchbuttons.html">
+     Launch into interactive computing interfaces
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interactive/thebe.html">
+     Make your code cells executable
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../interactive/comments.html">
+     Commenting and annotating
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interactive/comments/hypothesis.html">
+       Hypothesis
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interactive/comments/utterances.html">
+       Utterances
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advanced/html.html">
+     Advanced HTML outputs
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../sphinx/index.html">
+   Sphinx usage and customization
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advanced/sphinx.html">
+     Advanced Sphinx usage
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advanced/developers.html">
+     Developer workflows
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../explain/sphinx.html">
+     How Jupyter Book and Sphinx relate to one another
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../advanced/index.html">
+   Advanced Jupyter Book Usage
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advanced/windows.html">
+     Working on Windows
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../contribute/intro.html">
+   Contribute to Jupyter Book
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../customize/config.html">
+   Configuration reference
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/cheatsheet.html">
+   MyST syntax cheat sheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/cli.html">
+   Command-line interface reference
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/glossary.html">
+   Glossary
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  About Jupyter Book
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://executablebooks.org/en/latest/gallery.html">
+   Gallery of Jupyter Books
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../explain/components.html">
+   The Jupyter Book toolchain and components
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cite.html">
+   Cite Jupyter Book
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/_changelog.html">
+   Change log
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/content/content-blocks.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcontent/content-blocks.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/executablebooks/jupyter-book/edit/master/docs/content/content-blocks.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#myst-syntax-extensions">
+   MyST syntax extensions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#notes-warnings-and-other-admonitions">
+   Notes, warnings, and other admonitions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#blocks-of-text-with-custom-titles">
+     Blocks of text with custom titles
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#markdown-friendly-directives-with">
+     Markdown-friendly directives with
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       :::
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#insert-code-cell-outputs-into-admonitions">
+     Insert code cell outputs into admonitions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#html-admonitions">
+     HTML admonitions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#do-not-embed-headings-inside-admonitions">
+     Do not embed headings inside admonitions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#panels">
+   Panels
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#controlling-the-look-and-feel-of-panels">
+     Controlling the look and feel of panels
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dropdowns">
+   Dropdowns
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-dropdown-directive">
+     The
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       {dropdown}
+      </span>
+     </code>
+     directive
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dropdown-admonitions">
+     Dropdown admonitions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition-lists">
+   Definition lists
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quotations-and-epigraphs">
+   Quotations and epigraphs
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#quotations">
+     Quotations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#epigraphs">
+     Epigraphs
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#glossaries">
+   Glossaries
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#indexes">
+   Indexes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reference-your-general-index">
+     Reference your general index
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-index-directive">
+     The
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       {index}
+      </span>
+     </code>
+     directive
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#add-a-label-to-your-index-directive">
+       Add a label to your
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         {index}
+        </span>
+       </code>
+       directive
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#create-more-complex-index-entries">
+       Create more complex index entries
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-index-entries-with-other-extensions">
+     Create index entries with other extensions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#add-the-general-index-to-your-table-of-contents">
+     Add the general index to your table of contents
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tabbed-content">
+   Tabbed content
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#substitutions-and-variables-in-markdown">
+   Substitutions and variables in markdown
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#define-substitutions-for-your-whole-book">
+     Define substitutions for your whole book
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#formatting-substitutions">
+     Formatting substitutions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#using-substitutions-in-links">
+     Using substitutions in links
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#citations-and-cross-references">
+   Citations and cross-references
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#figures">
+   Figures
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#page-layout-and-sidebar-content">
+   Page layout and sidebar content
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#footnotes">
+   Footnotes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#custom-div-blocks">
+   Custom
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     &lt;div&gt;
+    </span>
+   </code>
+   blocks
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Special content blocks</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#myst-syntax-extensions">
+   MyST syntax extensions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#notes-warnings-and-other-admonitions">
+   Notes, warnings, and other admonitions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#blocks-of-text-with-custom-titles">
+     Blocks of text with custom titles
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#markdown-friendly-directives-with">
+     Markdown-friendly directives with
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       :::
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#insert-code-cell-outputs-into-admonitions">
+     Insert code cell outputs into admonitions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#html-admonitions">
+     HTML admonitions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#do-not-embed-headings-inside-admonitions">
+     Do not embed headings inside admonitions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#panels">
+   Panels
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#controlling-the-look-and-feel-of-panels">
+     Controlling the look and feel of panels
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dropdowns">
+   Dropdowns
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-dropdown-directive">
+     The
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       {dropdown}
+      </span>
+     </code>
+     directive
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dropdown-admonitions">
+     Dropdown admonitions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition-lists">
+   Definition lists
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quotations-and-epigraphs">
+   Quotations and epigraphs
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#quotations">
+     Quotations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#epigraphs">
+     Epigraphs
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#glossaries">
+   Glossaries
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#indexes">
+   Indexes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reference-your-general-index">
+     Reference your general index
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-index-directive">
+     The
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       {index}
+      </span>
+     </code>
+     directive
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#add-a-label-to-your-index-directive">
+       Add a label to your
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         {index}
+        </span>
+       </code>
+       directive
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#create-more-complex-index-entries">
+       Create more complex index entries
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-index-entries-with-other-extensions">
+     Create index entries with other extensions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#add-the-general-index-to-your-table-of-contents">
+     Add the general index to your table of contents
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tabbed-content">
+   Tabbed content
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#substitutions-and-variables-in-markdown">
+   Substitutions and variables in markdown
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#define-substitutions-for-your-whole-book">
+     Define substitutions for your whole book
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#formatting-substitutions">
+     Formatting substitutions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#using-substitutions-in-links">
+     Using substitutions in links
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#citations-and-cross-references">
+   Citations and cross-references
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#figures">
+   Figures
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#page-layout-and-sidebar-content">
+   Page layout and sidebar content
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#footnotes">
+   Footnotes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#custom-div-blocks">
+   Custom
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     &lt;div&gt;
+    </span>
+   </code>
+   blocks
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="special-content-blocks">
+<h1>Special content blocks<a class="headerlink" href="#special-content-blocks" title="Permalink to this headline">¶</a></h1>
+<p>A common use of directives and roles is to designate “special blocks” of your content.
+This allows you to include more complex information such as warnings and notes, citations, and figures.
+This section covers a few common ones.</p>
+<div class="section" id="myst-syntax-extensions">
+<span id="content-blocks-myst-extensions"></span><h2>MyST syntax extensions<a class="headerlink" href="#myst-syntax-extensions" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="../reference/glossary.html#term-MyST-Markdown"><span class="xref std std-term">MyST Markdown</span></a> has a base syntax that it supports, and additional syntax can be enabled to add extra functionality.
+By default, Jupyter Book enables a few extra syntax pieces for MyST in order to more closely resemble the Markdown experience in Jupyter Notebooks and interfaces.
+These extensions are:</p>
+<dl class="simple myst">
+<dt><code class="docutils literal notranslate"><span class="pre">dollarmath</span></code></dt><dd><p>To support <code class="docutils literal notranslate"><span class="pre">$$</span></code> and <code class="docutils literal notranslate"><span class="pre">$</span></code> syntax for math blocks. See <a class="reference internal" href="math.html"><span class="doc std std-doc">Math and equations</span></a>.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">linkify</span></code></dt><dd><p>To auto-detect HTML-like links in your markdown and convert them to hyperlinks.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">substitution</span></code></dt><dd><p>To allow you to define markdown “variables” and substitute text in using them. See <a class="reference internal" href="#content-substitutions"><span class="std std-ref">Substitutions and variables in markdown</span></a>.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">colon_fence</span></code></dt><dd><p>To allow you to use <code class="docutils literal notranslate"><span class="pre">:::</span></code> fences for admonitions, in order to make them easier to render in interfaces that do not support MyST. See <a class="reference internal" href="#admonitions-colons"><span class="std std-ref">Markdown-friendly directives with :::</span></a>.</p>
+</dd>
+</dl>
+<p>To enable your own syntax extensions, use the following configuration pattern:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">parse</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">myst_enable_extensions</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">extension-1</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">extension-2</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Note that this will <strong>override</strong> the default Jupyter Book extension list.
+You should include all of the extensions that you want to be enabled.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>For a list of syntax extensions in MyST, see <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/using/syntax-optional.html">the MyST documentation</a>.</p>
+</div>
+</div>
+<div class="section" id="notes-warnings-and-other-admonitions">
+<span id="content-admonitions"></span><h2>Notes, warnings, and other admonitions<a class="headerlink" href="#notes-warnings-and-other-admonitions" title="Permalink to this headline">¶</a></h2>
+<p>Let’s say you wish to highlight a particular block of text that exists slightly apart from the narrative of your page.
+You can use the <strong><code class="docutils literal notranslate"><span class="pre">{note}</span></code></strong> directive for this.</p>
+<p>For example, the following text:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{note}
+Here is a note!
+```
+</pre></div>
+</div>
+<p>Results in the following output:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Here is a note!</p>
+</div>
+<div class="margin sidebar">
+<p class="sidebar-title">A note on nesting</p>
+<p>You can nest admonitions (and other content blocks) inside one another. For example:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Here’s a note block inside a margin block</p>
+</div>
+<p>See <a class="reference internal" href="myst.html#markdown-nesting"><span class="std std-ref">Nesting content blocks in Markdown</span></a> for instructions to do this.</p>
+</div>
+<p>There are a number of similarly-styled blocks of text. For example, here is a <code class="docutils literal notranslate"><span class="pre">{warning}</span></code>
+block:</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Here’s a warning! It was created with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{warning}
+```
+</pre></div>
+</div>
+</div>
+<p>For a complete list of options, see <a class="reference external" href="https://sphinx-book-theme.readthedocs.io/en/latest/reference/kitchen-sink/paragraph-markup.html#admonitions">the <code class="docutils literal notranslate"><span class="pre">sphinx-book-theme</span></code> documentation</a>.</p>
+<div class="section" id="blocks-of-text-with-custom-titles">
+<h3>Blocks of text with custom titles<a class="headerlink" href="#blocks-of-text-with-custom-titles" title="Permalink to this headline">¶</a></h3>
+<p>You can also choose the title of your message box by using the
+<strong><code class="docutils literal notranslate"><span class="pre">{admonition}</span></code></strong> directive. For example, the following text:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{admonition} Here&#39;s your admonition
+Here&#39;s the admonition content
+```
+</pre></div>
+</div>
+<p>Results in the following output:</p>
+<div class="admonition-here-s-your-admonition admonition">
+<p class="admonition-title">Here’s your admonition</p>
+<p>Here’s the admonition content</p>
+</div>
+<p>If you’d like to <strong>style these blocks</strong>, then use the <code class="docutils literal notranslate"><span class="pre">:class:</span></code> option. For
+example:</p>
+<div class="tip admonition">
+<p class="admonition-title">This admonition was styled…</p>
+<p>Using the following pattern:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{admonition} My title
+:class: tip
+My content
+```
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="markdown-friendly-directives-with">
+<span id="admonitions-colons"></span><h3>Markdown-friendly directives with <code class="docutils literal notranslate"><span class="pre">:::</span></code><a class="headerlink" href="#markdown-friendly-directives-with" title="Permalink to this headline">¶</a></h3>
+<p>The admonition syntax above utilises the general <a class="reference internal" href="myst.html#content-myst-directives"><span class="std std-ref">directives syntax</span></a>.
+However, if you’re using an interface that does not support <a class="reference internal" href="../reference/glossary.html#term-MyST-Markdown"><span class="xref std std-term">MyST Markdown</span></a>, it will render as a raw literal block.
+Many directives contain markdown inside, and if you’d like this markdown to render “normally”, you may also use <code class="docutils literal notranslate"><span class="pre">:::</span></code> fences rather than <code class="docutils literal notranslate"><span class="pre">```</span></code> fences to define the directive. As a result, the contents of the directive will be rendered as markdown.</p>
+<p>For example:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>:::{note}
+This text is <span class="gs">**standard**</span> <span class="ge">_Markdown_</span>
+:::
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This text is <strong>standard</strong> <em>Markdown</em></p>
+</div>
+<p>Similar to normal directives, these admonitions can also be nested:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>::::{important}
+:::{note}
+This text is <span class="gs">**standard**</span> <span class="ge">_Markdown_</span>
+:::
+::::
+</pre></div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This text is <strong>standard</strong> <em>Markdown</em></p>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can use this syntax for any kind of directive, though it is generally recommended to use only with directives that contain pure markdown in their content.</p>
+</div>
+</div>
+<div class="section" id="insert-code-cell-outputs-into-admonitions">
+<h3>Insert code cell outputs into admonitions<a class="headerlink" href="#insert-code-cell-outputs-into-admonitions" title="Permalink to this headline">¶</a></h3>
+<p>If you’d like to insert the outputs of running code <em>inside</em> admonition
+blocks, we recommend using <a class="reference internal" href="executable/output-insert.html#content-code-outputs-glue"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">glue</span></code> functionality</span></a>.
+For example, we’ll insert one of the outputs that was glued into the book from the <a class="reference internal" href="code-outputs.html"><span class="doc std std-doc">code outputs page</span></a>.</p>
+<p>The code below:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{note}
+Here&#39;s my figure:
+{glue:figure}`sorted_means_fig`
+```
+</pre></div>
+</div>
+<p>generates:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Here’s my figure:
+<span class="pasted-inline"><img alt="../_images/output-insert_10_1.png" src="../_images/output-insert_10_1.png" /></span></p>
+</div>
+<p>See <a class="reference internal" href="executable/output-insert.html#content-code-outputs-glue"><span class="std std-ref">Store code outputs and insert into content</span></a> for more information on how to use <code class="docutils literal notranslate"><span class="pre">glue</span></code> to insert your outputs directly into your content.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>To hide code input and output that generated the variable you are inserting, use the <code class="docutils literal notranslate"><span class="pre">remove_cell</span></code> tag.
+See <a class="reference internal" href="../interactive/hiding.html"><span class="doc std std-doc">Hide or remove content</span></a> for more information and other tag options.</p>
+</div>
+</div>
+<div class="section" id="html-admonitions">
+<span id="content-blocks-html-admonitions"></span><h3>HTML admonitions<a class="headerlink" href="#html-admonitions" title="Permalink to this headline">¶</a></h3>
+<p>A drawback of admonition syntax is that it will not render in interfaces that do not support this syntax (e.g., GitHub). If you’d like to use admonitions that are defined <em>purely with HTML</em>, MyST can parse them via the <code class="docutils literal notranslate"><span class="pre">html_admonitions</span></code> extension. To use it, first enable it with the following configuration:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">parse</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">myst_enable_extensions</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># don&#39;t forget to list any other extensions you want enabled,</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># including those that are enabled by default!</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">html_admonition</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Then, you may define admonitions in your book like so:</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="7ab0942d-cb88-4ca3-a952-337effd3570f" name="726935d8-c2e7-4f96-aef1-734ff2d68890" type="radio">
+</input><label class="tabbed-label" for="7ab0942d-cb88-4ca3-a952-337effd3570f">
+Markdown Input</label><div class="tabbed-content docutils">
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;admonition note&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;html-admonition&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;background: lightgreen; padding: 10px&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;title&quot;</span><span class="p">&gt;</span>This is the **title**<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+This is the *content*
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<input id="31a1dde4-ad90-47b7-b756-f9cd24c7b6dd" name="726935d8-c2e7-4f96-aef1-734ff2d68890" type="radio">
+</input><label class="tabbed-label" for="31a1dde4-ad90-47b7-b756-f9cd24c7b6dd">
+Rendered Output</label><div class="tabbed-content docutils">
+<div class="admonition note" id="html-admonition">
+<p class="admonition-title">This is the <strong>title</strong></p>
+<p>This is the <em>content</em></p>
+</div>
+</div>
+</div>
+<p>See <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#syntax-html-admonition" title="(in MyST Parser v0.17.0)"><span>HTML Admonitions</span></a> for more information about HTML admonitions.</p>
+</div>
+<div class="section" id="do-not-embed-headings-inside-admonitions">
+<span id="content-blocks-warning-headers-admonitions"></span><h3>Do not embed headings inside admonitions<a class="headerlink" href="#do-not-embed-headings-inside-admonitions" title="Permalink to this headline">¶</a></h3>
+<p>You should <strong>not</strong> embed headings (lines starting with <code class="docutils literal notranslate"><span class="pre">#</span></code>) inside of admonitions, dropdowns, or other content blocks such as this.
+Sphinx (and thus Jupyter Book) uses headings to define the major top-level sections of a document.
+For this reason, nesting a heading within a block will cause unpredictable breakage of the document structure.</p>
+<div class="warning admonition">
+<p class="admonition-title">Do not do this</p>
+<p>For example, <strong>do not do this</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{note}
+## This heading is inside an admonition, and will mess things up!
+
+Don&#39;t do this!
+```
+</pre></div>
+</div>
+</div>
+<p>To achieve a similar effect, write some <strong>bold text</strong> instead of using a markdown header.</p>
+</div>
+</div>
+<div class="section" id="panels">
+<span id="content-panels"></span><h2>Panels<a class="headerlink" href="#panels" title="Permalink to this headline">¶</a></h2>
+<p>Panels provide an easy way for you to organize chunks of content into flexible containers on your page.
+They are useful for creating card-like layouts, flexible columns, and grids.
+Panels are based off of <a class="reference external" href="https://getbootstrap.com/docs/4.5/components/card/">Bootstrap CSS</a>, and utilize Bootstrap’s classes to control the look and feel of panels.</p>
+<p>Here is an example that creates two panels:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>````{panels}
+Panel header 1
+^^^
+Panel body 1
++++
+Panel footer 1
+---
+
+Panel header 2
+^^^
+Panel body 2
++++
+Panel footer 2
+````
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">---</span></code> separates each panel</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">^^^</span></code> defines the panel header</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">+++</span></code> defines the panel footer</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Panel headers and footers are optional.
+If you don’t include <code class="docutils literal notranslate"><span class="pre">^^^</span></code> or <code class="docutils literal notranslate"><span class="pre">+++</span></code> in your panel, they will not show up.</p>
+</div>
+<p>You can embed all kinds of content inside of panels. For example, the following panels:</p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<p class="card-text">Content of the left panel.</p>
+<p class="card-text"><span class="sphinx-bs badge badge-primary">example-badge</span></p>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<p class="card-text"><a class="sphinx-bs btn text-wrap stretched-link reference internal" href="#content-panels"><span class="std std-ref">Clickable right panel</span></a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>were created with:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>````{panels}
+Content of the left panel.
+
+{badge}`example-badge,badge-primary`
+
+---
+
+```{link-button} content/panels
+:text: Clickable right panel
+:type: ref
+:classes: stretched-link
+```
+
+````
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>See the <a class="reference external" href="https://sphinx-panels.readthedocs.io/en/latest/#card-layout">Sphinx Panels card layout documentation</a> for more information.</p>
+</div>
+<div class="section" id="controlling-the-look-and-feel-of-panels">
+<h3>Controlling the look and feel of panels<a class="headerlink" href="#controlling-the-look-and-feel-of-panels" title="Permalink to this headline">¶</a></h3>
+<p>You can control the look and feel of panels by passing attaching bootstrap classes to panel headers/body/footers.
+You do this by passing configuration options to your  <code class="docutils literal notranslate"><span class="pre">{panels}</span></code> directive.</p>
+<p>For example:</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>See the <a class="reference external" href="https://sphinx-panels.readthedocs.io/en/latest/#card-styling">Panels card styling documentation</a> for more information.</p>
+</div>
+<p>For example, you can control how many columns are in your panels by using <a class="reference external" href="https://getbootstrap.com/docs/4.0/layout/grid/">Bootstrap column classes</a>. These panels:</p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-4 docutils">
+<div class="card w-100 border-2 docutils">
+<div class="card-header docutils">
+<p class="card-text">Header A</p>
+</div>
+<div class="card-body docutils">
+<p class="card-text">Body A</p>
+</div>
+</div>
+</div>
+<div class="d-flex col-4 docutils">
+<div class="card w-100 border-2 docutils">
+<div class="card-header docutils">
+<p class="card-text">Header B</p>
+</div>
+<div class="card-body docutils">
+<p class="card-text">Body B</p>
+</div>
+</div>
+</div>
+<div class="d-flex col-4 docutils">
+<div class="card w-100 border-2 docutils">
+<div class="card-header docutils">
+<p class="card-text">Header C</p>
+</div>
+<div class="card-body docutils">
+<p class="card-text">Body C</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Were created by this code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>````{panels}
+:column: col-4
+:card: border-2
+Header A
+^^^
+Body A
+---
+Header B
+^^^
+Body B
+---
+Header C
+^^^
+Body C
+````
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="dropdowns">
+<span id="content-dropdowns"></span><h2>Dropdowns<a class="headerlink" href="#dropdowns" title="Permalink to this headline">¶</a></h2>
+<p>Dropdowns allows you to hide content behind a title and a button.
+There are two kinds of dropdowns in Jupyter Book:</p>
+<div class="section" id="the-dropdown-directive">
+<h3>The <code class="docutils literal notranslate"><span class="pre">{dropdown}</span></code> directive<a class="headerlink" href="#the-dropdown-directive" title="Permalink to this headline">¶</a></h3>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">{dropdown}</span></code> directive to create a clickable dropdown with a title.</p>
+<p>For example:</p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">source</p>
+</div>
+<div class="card-body docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{dropdown} Here&#39;s my dropdown
+And here&#39;s my dropdown content
+```
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">result</p>
+</div>
+<div class="card-body docutils">
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Here’s my dropdown<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">And here’s my dropdown content</p>
+</div>
+</details></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="dropdown-admonitions">
+<span id="content-toggle-admonitions"></span><h3>Dropdown admonitions<a class="headerlink" href="#dropdown-admonitions" title="Permalink to this headline">¶</a></h3>
+<p>You can also hide the body of your admonition blocks so that users must click a button to reveal their content.
+This is helpful if you’d like to include some text that isn’t immediately visible to the user.</p>
+<p>To turn an admonition into a dropdown, add the <code class="docutils literal notranslate"><span class="pre">dropdown</span></code> class to them. For example:</p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">source</p>
+</div>
+<div class="card-body docutils">
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{note}
+:class: dropdown
+The note body will be hidden!
+```
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">result</p>
+</div>
+<div class="card-body docutils">
+<div class="dropdown admonition note">
+<p class="admonition-title">Note</p>
+<p class="card-text">The note body will be hidden!</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>You can use this in conjunction with <code class="docutils literal notranslate"><span class="pre">{admonition}</span></code> directives to include your
+own titles and stylings. For example:</p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">source</p>
+</div>
+<div class="card-body docutils">
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>:::{admonition} Click here!
+:class: tip, dropdown
+Here&#39;s what&#39;s inside!
+:::
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">result</p>
+</div>
+<div class="card-body docutils">
+<div class="tip dropdown admonition">
+<p class="card-title admonition-title">Click here!</p>
+<p class="card-text">Here’s what’s inside!</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Admonition dropdowns require JavaScript to be enabled on the browser which they are viewed.
+By contrast, the <a class="reference internal" href="#content-panels"><span class="std std-ref">dropdown directive</span></a> below works purely <em>via</em> HTML+CSS.</p>
+</div>
+</div>
+</div>
+<div class="section" id="definition-lists">
+<span id="content-definition-lists"></span><h2>Definition lists<a class="headerlink" href="#definition-lists" title="Permalink to this headline">¶</a></h2>
+<p>Definition lists are enabled by defining the following setting in your <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">parse</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">myst_enable_extensions</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># don&#39;t forget to list any other extensions you want enabled,</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># including those that are enabled by default!</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deflist</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Definition lists utilise the <a class="reference external" href="https://markdown-it-py.readthedocs.io/en/latest/plugins.html">markdown-it-py deflist plugin</a>, which itself is based on the <a class="reference external" href="http://johnmacfarlane.net/pandoc/README.html#definition-lists">Pandoc definition list specification</a>.</p>
+<p>Here’s an example:</p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">source</p>
+</div>
+<div class="card-body docutils">
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>Term 1
+: Definition
+
+Term 2
+: Definition
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">result</p>
+</div>
+<div class="card-body docutils">
+<dl class="simple myst">
+<dt>Term 1</dt><dd><p class="card-text">Definition</p>
+</dd>
+<dt>Term 2</dt><dd><p class="card-text">Definition</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>From the <a class="reference external" href="https://pandoc.org/MANUAL.html#definition-lists">Pandoc documentation</a>:</p>
+<blockquote>
+<div><p>Each term must fit on one line, which may optionally be followed by a blank line, and must be followed by one or more definitions.
+A definition begins with a colon or tilde, which may be indented one or two spaces.</p>
+<p>A term may have multiple definitions, and each definition may consist of one or more block elements (paragraphs, code blocks, lists, etc.)</p>
+</div></blockquote>
+<p>Here is a more complex example, demonstrating some of these features:</p>
+<dl class="simple myst">
+<dt>Term <em>with Markdown</em></dt><dd><p>Definition <a class="reference internal" href="#content-definition-lists"><span class="std std-ref">with reference</span></a></p>
+<p>A second paragraph</p>
+</dd>
+<dd><p>A second definition</p>
+</dd>
+<dt>Term 2</dt><dd><p>Definition 2a</p>
+</dd>
+<dd><p>Definition 2b</p>
+</dd>
+<dt>Term 3</dt><dd><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>A code block
+</pre></div>
+</div>
+</dd>
+<dd><blockquote>
+<div><p>A quote</p>
+</div></blockquote>
+</dd>
+<dd><p>A final definition, that can even include images:</p>
+<a class="reference internal image-reference" href="../_images/fun-fish.png"><img alt="fishy" src="../_images/fun-fish.png" style="width: 200px;" /></a>
+</dd>
+</dl>
+<p>This was created with the following Markdown:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>Term <span class="ge">*with Markdown*</span>
+: Definition [<span class="nt">with reference</span>](<span class="na">ontent/definition-lists</span>)
+
+  A second paragraph
+
+Term 2
+  ~ Definition 2a
+  ~ Definition 2b
+
+Term 3
+:     A code block
+
+: &gt; A quote
+
+: A final definition, that can even include images:
+
+  &lt;img src=&quot;../images/fun-fish.png&quot; alt=&quot;fishy&quot; width=&quot;200px&quot;&gt;
+</pre></div>
+</div>
+</div>
+<div class="section" id="quotations-and-epigraphs">
+<h2>Quotations and epigraphs<a class="headerlink" href="#quotations-and-epigraphs" title="Permalink to this headline">¶</a></h2>
+<p>Quotations and epigraphs provide ways to highlight information given by others.</p>
+<div class="section" id="quotations">
+<h3>Quotations<a class="headerlink" href="#quotations" title="Permalink to this headline">¶</a></h3>
+<p><strong>Regular quotations</strong> are controlled with standard Markdown syntax, i.e., by
+inserting a caret (<code class="docutils literal notranslate"><span class="pre">&gt;</span></code>) symbol in front of one or more lines of text. For example:</p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">source</p>
+</div>
+<div class="card-body docutils">
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="k">&gt; </span><span class="ge">Here is a cool quotation.</span>
+<span class="k">&gt;</span>
+<span class="ge">&gt; From me, Jo the Jovyan</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">result</p>
+</div>
+<div class="card-body docutils">
+<blockquote>
+<div><p class="card-text">Here is a cool quotation.</p>
+<p class="card-text">From me, Jo the Jovyan</p>
+</div></blockquote>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="epigraphs">
+<h3>Epigraphs<a class="headerlink" href="#epigraphs" title="Permalink to this headline">¶</a></h3>
+<p><strong>Epigraphs</strong> draw more attention to a quote and highlight its author. You should
+keep these relatively short so that they don’t take up too much vertical space. Here’s
+how an epigraph looks:</p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">source</p>
+</div>
+<div class="card-body docutils">
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{epigraph}
+Here is a cool quotation.
+
+From me, Jo the Jovyan
+```
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">result</p>
+</div>
+<div class="card-body docutils">
+<blockquote class="epigraph">
+<div><p class="card-text">Here is a cool quotation.</p>
+<p class="card-text">From me, Jo the Jovyan</p>
+</div></blockquote>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>You can provide an <strong>attribution</strong> to an epigraph by adding <code class="docutils literal notranslate"><span class="pre">--</span></code> to the final line, followed by the quote author. For example:</p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">source</p>
+</div>
+<div class="card-body docutils">
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{epigraph}
+Here is a cool quotation.
+
+-- Jo the Jovyan
+```
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">result</p>
+</div>
+<div class="card-body docutils">
+<blockquote class="epigraph">
+<div><p class="card-text">Here is a cool quotation.</p>
+<p class="attribution">—Jo the Jovyan</p>
+</div></blockquote>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="glossaries">
+<span id="content-blocks-glossaries"></span><h2>Glossaries<a class="headerlink" href="#glossaries" title="Permalink to this headline">¶</a></h2>
+<p>Glossaries allow you to define terms in a glossary so you can then link back to it
+throughout your content. You can create a glossary with the following
+syntax:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{glossary}
+Term one
+  An indented explanation of term 1
+
+A second term
+  An indented explanation of term2
+```
+</pre></div>
+</div>
+<p>which creates:</p>
+<dl class="glossary simple">
+<dt id="term-Term-one">Term one<a class="headerlink" href="#term-Term-one" title="Permalink to this term">¶</a></dt><dd><p>An indented explanation of term 1</p>
+</dd>
+<dt id="term-A-second-term">A second term<a class="headerlink" href="#term-A-second-term" title="Permalink to this term">¶</a></dt><dd><p>An indented explanation of term2</p>
+</dd>
+</dl>
+<p>To reference terms in your glossary, use the <code class="docutils literal notranslate"><span class="pre">{term}</span></code> role. For example,
+<code class="docutils literal notranslate"><span class="pre">{term}`Term</span> <span class="pre">one`</span></code> becomes <a class="reference internal" href="#term-Term-one"><span class="xref std std-term">Term one</span></a> and <code class="docutils literal notranslate"><span class="pre">{term}`A</span> <span class="pre">second</span> <span class="pre">term`</span></code>
+becomes <a class="reference internal" href="#term-A-second-term"><span class="xref std std-term">A second term</span></a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Glossary terms are automatically added to <a class="reference internal" href="#content-indexes"><span class="std std-ref">your book’s index page</span></a>.</p>
+</div>
+</div>
+<div class="section" id="indexes">
+<span id="content-indexes"></span><h2>Indexes<a class="headerlink" href="#indexes" title="Permalink to this headline">¶</a></h2>
+<p>Indexes allow you to define index items (terms, phrases, keywords, etc) that are collected in a single page, with links back to their location in your content.
+This is called the <strong>General Index</strong>.</p>
+<p id="index-0">When you build your book, a general index page will automatically be generated.</p>
+<div class="section" id="reference-your-general-index">
+<h3>Reference your general index<a class="headerlink" href="#reference-your-general-index" title="Permalink to this headline">¶</a></h3>
+<p>To create a reference / link to your general index, use the <code class="docutils literal notranslate"><span class="pre">genindex</span></code> keyword.
+For example:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">{ref}`using</span> <span class="pre">a</span> <span class="pre">ref</span> <span class="pre">role</span> <span class="pre">&lt;genindex&gt;`</span></code>: <a class="reference internal" href="../genindex.html"><span class="std std-ref">using a ref role</span></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[using</span> <span class="pre">markdown</span> <span class="pre">link</span> <span class="pre">syntax](genindex)</span></code>: <a class="reference internal" href="../genindex.html"><span class="std std-ref">using markdown link syntax</span></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[](genindex)</span></code>: <a class="reference internal" href="../genindex.html"><span class="std std-ref">Index</span></a> (to demonstrate the title of the general index)</p></li>
+</ul>
+</div>
+<div class="section" id="the-index-directive">
+<h3>The <code class="docutils literal notranslate"><span class="pre">{index}</span></code> directive<a class="headerlink" href="#the-index-directive" title="Permalink to this headline">¶</a></h3>
+<p>You can add items to your general index with the <code class="docutils literal notranslate"><span class="pre">{index}</span></code> directive.
+It has the following syntax:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{index} Entry name
+```
+</pre></div>
+</div>
+<p>This will not insert anything into your final page’s content, but will add a link to this section in your general index.
+For example, we’ve added the following index directive below:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{index} index directive
+```
+</pre></div>
+</div>
+<p id="index-1">You can <a class="reference internal" href="../genindex.html"><span class="std std-ref">find this term in the index</span></a>.</p>
+<div class="section" id="add-a-label-to-your-index-directive">
+<h4>Add a label to your <code class="docutils literal notranslate"><span class="pre">{index}</span></code> directive<a class="headerlink" href="#add-a-label-to-your-index-directive" title="Permalink to this headline">¶</a></h4>
+<p>You can customize the name for an index entry by setting the <code class="docutils literal notranslate"><span class="pre">:name:</span></code> parameter.
+For example:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{index} Index names
+:name: index-names
+```
+</pre></div>
+</div>
+<p id="index-names">You can then reference this index in your book.
+For example:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">{ref}`See</span> <span class="pre">index</span> <span class="pre">names</span> <span class="pre">&lt;index-names&gt;`</span></code>: <a class="reference internal" href="#index-names"><span class="std std-ref">See index names</span></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[See</span> <span class="pre">index</span> <span class="pre">names](index-names)</span></code>: <a class="reference internal" href="#index-names"><span class="std std-ref">See index names</span></a></p></li>
+</ul>
+</div>
+<div class="section" id="create-more-complex-index-entries">
+<h4>Create more complex index entries<a class="headerlink" href="#create-more-complex-index-entries" title="Permalink to this headline">¶</a></h4>
+<p>The Sphinx <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html?highlight=index#index-generating-markup"><em>Index-generating markup</em></a> page describes the full range of indexing possibilites.
+This includes the ability to construct nested headings using the <code class="docutils literal notranslate"><span class="pre">;</span></code> separator to represent a change in index level:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{index} single: Jupyter Book ; installation
+```
+</pre></div>
+</div>
+<p>Multiple index entry terms can be created from a single reference.
+For example, we can create entries <code class="docutils literal notranslate"><span class="pre">references</span> <span class="pre">;</span> <span class="pre">index</span> <span class="pre">terms</span></code> and <code class="docutils literal notranslate"><span class="pre">index</span> <span class="pre">terms</span> <span class="pre">;</span> <span class="pre">references</span></code> from the following entry:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{index} double: references ; index terms
+```
+</pre></div>
+</div>
+<p>Readers can be directed towards alternative index terms within the index itself by using <code class="docutils literal notranslate"><span class="pre">see</span></code> or <code class="docutils literal notranslate"><span class="pre">seealso</span></code>, as in the following example which adds an entry for <code class="docutils literal notranslate"><span class="pre">citations</span></code> to also refer to <code class="docutils literal notranslate"><span class="pre">bibliographies</span></code>:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{index} seealso: citations ; bibliographies
+```
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="create-index-entries-with-other-extensions">
+<h3>Create index entries with other extensions<a class="headerlink" href="#create-index-entries-with-other-extensions" title="Permalink to this headline">¶</a></h3>
+<p>You can also create index entries through the use of other Sphinx extensions.
+For example, any term you define <a class="reference internal" href="#content-blocks-glossaries"><span class="std std-ref">in a Glossary</span></a> will also be inserted into the index.</p>
+</div>
+<div class="section" id="add-the-general-index-to-your-table-of-contents">
+<h3>Add the general index to your table of contents<a class="headerlink" href="#add-the-general-index-to-your-table-of-contents" title="Permalink to this headline">¶</a></h3>
+<p>To add your general index to your book’s table of contents, take the following steps:</p>
+<ul>
+<li><p>Create a file in the root of your book called <code class="docutils literal notranslate"><span class="pre">genindex.md</span></code>.</p></li>
+<li><p>It <strong>must have a title</strong> but the rest can be blank.
+The title will actually be replaced with <code class="docutils literal notranslate"><span class="pre">Index</span></code> when your book is built, but it is needed in your source file to avoid errors.</p></li>
+<li><p>Add an entry for this page in <a class="reference internal" href="../customize/toc.html#structure-book"><span class="std std-ref">your table of contents</span></a>.
+For example:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">format</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">jb-book</span><span class="w"></span>
+<span class="nt">root</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">index</span><span class="w"></span>
+<span class="nt">chapters</span><span class="p">:</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">path/to/chapter1</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">path/to/chapter2</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">genindex</span><span class="w"></span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="tabbed-content">
+<span id="content-tabs"></span><h2>Tabbed content<a class="headerlink" href="#tabbed-content" title="Permalink to this headline">¶</a></h2>
+<p>You can also use <a class="reference external" href="https://sphinx-panels.readthedocs.io/en/sphinx-book-theme/index.html#panels-usage" title="(in Sphinx-Panels v0.5.1)"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">sphinx-panels</span></code></span></a> to produce <a class="reference external" href="https://sphinx-panels.readthedocs.io/en/sphinx-book-theme/index.html#components-tabbed" title="(in Sphinx-Panels v0.5.1)"><span class="xref myst"><strong>tabbed content</strong></span></a>.
+This allows you to display a variety of tabbed content blocks that users can click on.</p>
+<p>For example, here’s a group of tabs showing off code in a few different languages:</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="eb7bd8c1-9e4f-4a3f-807d-2183070fe135" name="1fd691ae-88a0-403a-b284-b45792679ce9" type="radio">
+</input><label class="tabbed-label" for="eb7bd8c1-9e4f-4a3f-807d-2183070fe135">
+c++</label><div class="tabbed-content docutils">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">**</span><span class="n">argv</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<input id="1844cbbe-f77d-42a8-a1b0-e25929c203ac" name="1fd691ae-88a0-403a-b284-b45792679ce9" type="radio">
+</input><label class="tabbed-label" for="1844cbbe-f77d-42a8-a1b0-e25929c203ac">
+python</label><div class="tabbed-content docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="k">return</span>
+</pre></div>
+</div>
+</div>
+<input id="ae3af626-5193-44cc-bb0c-376f6ebc96c7" name="1fd691ae-88a0-403a-b284-b45792679ce9" type="radio">
+</input><label class="tabbed-label" for="ae3af626-5193-44cc-bb0c-376f6ebc96c7">
+java</label><div class="tabbed-content docutils">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Main</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<input id="e871caa9-a4d0-412f-9379-cf44e515409b" name="1fd691ae-88a0-403a-b284-b45792679ce9" type="radio">
+</input><label class="tabbed-label" for="e871caa9-a4d0-412f-9379-cf44e515409b">
+julia</label><div class="tabbed-content docutils">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">function</span> <span class="n">main</span><span class="p">()</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<input id="976684ae-0a7b-445a-be3a-6143f69596d5" name="1fd691ae-88a0-403a-b284-b45792679ce9" type="radio">
+</input><label class="tabbed-label" for="976684ae-0a7b-445a-be3a-6143f69596d5">
+fortran</label><div class="tabbed-content docutils">
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">PROGRAM </span><span class="n">main</span><span class="w"></span>
+<span class="k">END PROGRAM </span><span class="n">main</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can use this functionality with the <code class="docutils literal notranslate"><span class="pre">{tabbed}</span></code> directive. You can provide a sequence of <code class="docutils literal notranslate"><span class="pre">{tabbed}</span></code> directives, and each one will be used to generate a new tab (unless the <code class="docutils literal notranslate"><span class="pre">:new-group:</span></code> option is added to a <code class="docutils literal notranslate"><span class="pre">{tabbed}</span></code> directive.)</p>
+<p>For example, the following code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{tabbed} Tab 1 title
+My first tab
+```
+
+```{tabbed} Tab 2 title
+My second tab with `some code`!
+```
+</pre></div>
+</div>
+<p>produces</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="e06ed6ed-323d-4a8f-bdf7-16e4d7956b28" name="f518a06c-72d8-4c46-b627-b3184b278b7b" type="radio">
+</input><label class="tabbed-label" for="e06ed6ed-323d-4a8f-bdf7-16e4d7956b28">
+Tab 1 title</label><div class="tabbed-content docutils">
+<p>My first tab</p>
+</div>
+<input id="a7075999-ef6c-4bbd-8d61-34283487ff21" name="f518a06c-72d8-4c46-b627-b3184b278b7b" type="radio">
+</input><label class="tabbed-label" for="a7075999-ef6c-4bbd-8d61-34283487ff21">
+Tab 2 title</label><div class="tabbed-content docutils">
+<p>My second tab with <code class="docutils literal notranslate"><span class="pre">some</span> <span class="pre">code</span></code>!</p>
+</div>
+</div>
+<p><strong>Insert code outputs in your tabs</strong> with the <a class="reference internal" href="executable/output-insert.html#glue-gluing"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">glue</span></code> functionality</span></a>.</p>
+<p>For example, the following tabs use this functionality to glue images and tables generated somewhere else in these docs:</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="201c0783-d58b-4e9d-af74-d0fef4a50e91" name="2a9daeb7-2e3b-46cd-b124-c67030f05184" type="radio">
+</input><label class="tabbed-label" for="201c0783-d58b-4e9d-af74-d0fef4a50e91">
+A histogram</label><div class="tabbed-content docutils">
+<div class="figure align-default" id="fig-boot-tab" style="width: 300px">
+<div class="cell_output docutils container">
+<img alt="../_images/output-insert_10_0.png" src="../_images/output-insert_10_0.png" />
+</div>
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">This is a <strong>caption</strong>, with an embedded <code class="docutils literal notranslate"><span class="pre">{glue:text}</span></code> element: <span class="pasted-text">3.00</span>!</span><a class="headerlink" href="#fig-boot-tab" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<input id="51f33491-e985-40b1-984c-a5f3a87957ff" name="2a9daeb7-2e3b-46cd-b124-c67030f05184" type="radio">
+</input><label class="tabbed-label" for="51f33491-e985-40b1-984c-a5f3a87957ff">
+A table</label><div class="tabbed-content docutils">
+<div class="figure align-default" id="tbl-df-tab" style="width: 300px">
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>first</th>
+      <th>second</th>
+      <th>third</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2.746361</td>
+      <td>3.043929</td>
+      <td>3.202403</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2.789850</td>
+      <td>3.011028</td>
+      <td>2.957421</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3.152236</td>
+      <td>2.913354</td>
+      <td>2.933449</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3.132624</td>
+      <td>2.826694</td>
+      <td>2.791936</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2.928446</td>
+      <td>3.196804</td>
+      <td>3.236716</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">A caption for a pandas table.</span><a class="headerlink" href="#tbl-df-tab" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<input id="66bbd477-2a19-4147-bd74-ce6e39878f48" name="2a9daeb7-2e3b-46cd-b124-c67030f05184" type="radio">
+</input><label class="tabbed-label" for="66bbd477-2a19-4147-bd74-ce6e39878f48">
+Code to generate this</label><div class="tabbed-content docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>````{tabbed} A histogram
+```{glue:figure} boot_fig
+:figwidth: 300px
+:name: &quot;fig-boot-tab&quot;
+
+This is a **caption**, with an embedded `{glue:text}` element: {glue:text}`boot_mean:.2f`!
+```
+````
+
+````{tabbed} A table
+```{glue:figure} df_tbl
+:figwidth: 300px
+:name: &quot;tbl:df-tab&quot;
+
+A caption for a pandas table.
+```
+````
+
+````{tabbed} Code to generate this
+`{ code block here }`
+````
+</pre></div>
+</div>
+</div>
+</div>
+<p>See the <a class="reference external" href="https://sphinx-panels.readthedocs.io/en/sphinx-book-theme/index.html#components-tabbed" title="(in Sphinx-Panels v0.5.1)"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">sphinx-panels</span></code> tabbed</span></a> documentation for more information on how to use this.</p>
+</div>
+<div class="section" id="substitutions-and-variables-in-markdown">
+<span id="content-substitutions"></span><h2>Substitutions and variables in markdown<a class="headerlink" href="#substitutions-and-variables-in-markdown" title="Permalink to this headline">¶</a></h2>
+<p>Substitutions allow you to define <strong>variables</strong> in the front-matter of your page, and then <strong>insert</strong> those variables into your content throughout.</p>
+<p>To use a substitution, first add front-matter content to the top of a page like so:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span><span class="w"></span>
+<span class="nt">substitutions</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">key1</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;I&#39;m</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">**substitution**&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="nt">key2</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
+<span class="w">    </span><span class="no">```{note}</span><span class="w"></span>
+<span class="w">    </span><span class="no">{{ key1 }}</span><span class="w"></span>
+<span class="w">    </span><span class="no">```</span><span class="w"></span>
+<span class="w">  </span><span class="nt">fishy</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
+<span class="w">    </span><span class="no">```{image} img/fun-fish.png</span><span class="w"></span>
+<span class="w">    </span><span class="no">:alt: fishy</span><span class="w"></span>
+<span class="w">    </span><span class="no">:width: 200px</span><span class="w"></span>
+<span class="w">    </span><span class="no">```</span><span class="w"></span>
+<span class="nn">---</span><span class="w"></span>
+</pre></div>
+</div>
+<p>You can use these substitutions inline or as blocks, and you can even nest substitutions in other substitutions (but circular references are prohibited):</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="afefb403-87ac-43df-b43f-cb18244456fb" name="41d1a2cb-bcef-40d8-82d9-9ce82cb572c8" type="radio">
+</input><label class="tabbed-label" for="afefb403-87ac-43df-b43f-cb18244456fb">
+Markdown Input</label><div class="tabbed-content docutils">
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>Inline: {{ key1 }}
+
+Block level:
+
+{{ key2 }}
+</pre></div>
+</div>
+</div>
+<input id="17cb6dd1-a356-4de8-9ee0-a262ea4507ac" name="41d1a2cb-bcef-40d8-82d9-9ce82cb572c8" type="radio">
+</input><label class="tabbed-label" for="17cb6dd1-a356-4de8-9ee0-a262ea4507ac">
+Rendered Output</label><div class="tabbed-content docutils">
+<p>Inline: I’m a <strong>substitution</strong></p>
+<p>Block level:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>I’m a <strong>substitution</strong></p>
+</div>
+</div>
+</div>
+<p>You can also insert substitutions inside of other markdown structures like tables:</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="e4d55040-6f84-4216-b197-17e97922bdda" name="1b9e0484-d28f-41c2-9e84-24b9b5389c11" type="radio">
+</input><label class="tabbed-label" for="e4d55040-6f84-4216-b197-17e97922bdda">
+Markdown Input</label><div class="tabbed-content docutils">
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>| col1     | col2      |
+| -------- | --------- |
+| {{key2}} | {{fishy}} |
+</pre></div>
+</div>
+</div>
+<input id="c5fa0d53-d129-4fde-b174-cfbd85cb9fc9" name="1b9e0484-d28f-41c2-9e84-24b9b5389c11" type="radio">
+</input><label class="tabbed-label" for="c5fa0d53-d129-4fde-b174-cfbd85cb9fc9">
+Rendered Output</label><div class="tabbed-content docutils">
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>col1</p></th>
+<th class="head"><p>col2</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>I’m a <strong>substitution</strong></p>
+</div>
+</p></td>
+<td><p><a class="reference internal" href="../_images/fun-fish.png"><img alt="fishy" src="../_images/fun-fish.png" style="width: 200px;" /></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>For more information about Substitutions, see <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#syntax-substitutions" title="(in MyST Parser v0.17.0)"><span>Substitutions (with Jinja2)</span></a>.</p>
+</div>
+<div class="section" id="define-substitutions-for-your-whole-book">
+<h3>Define substitutions for your whole book<a class="headerlink" href="#define-substitutions-for-your-whole-book" title="Permalink to this headline">¶</a></h3>
+<p>You can also define book-level substitution variables with the following configuration:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">parse</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">myst_substitutions</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value</span><span class="w"></span>
+</pre></div>
+</div>
+<p>These substitutions will be available throughout your book. For example, the global substitution key <code class="docutils literal notranslate"><span class="pre">my-global-substitution</span></code> is defined in this book’s <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> file, and it produces: My <em>global</em> value!.</p>
+</div>
+<div class="section" id="formatting-substitutions">
+<h3>Formatting substitutions<a class="headerlink" href="#formatting-substitutions" title="Permalink to this headline">¶</a></h3>
+<p>MyST substitutions use <a class="reference external" href="https://jinja.palletsprojects.com/en/2.11.x/">Jinja templates</a> in order to substite in key / values. This means that you can apply any standard Jinja formatting to your substitutions. For example, you can <strong>replace text in your substitutions</strong> like so:</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="a29bf974-e2da-4ef3-bf9f-7951d5cb2e21" name="d5d817bf-137f-4fbe-8bc5-dc2793c5453c" type="radio">
+</input><label class="tabbed-label" for="a29bf974-e2da-4ef3-bf9f-7951d5cb2e21">
+Markdown Input</label><div class="tabbed-content docutils">
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>The original key1: {{ key1 }}
+
+{{ key1 | replace(&quot;a substitution&quot;, &quot;the best substitution&quot;)}}
+</pre></div>
+</div>
+</div>
+<input id="ace1c462-b404-48e4-98e6-9a19bda3efc2" name="d5d817bf-137f-4fbe-8bc5-dc2793c5453c" type="radio">
+</input><label class="tabbed-label" for="ace1c462-b404-48e4-98e6-9a19bda3efc2">
+Rendered Output</label><div class="tabbed-content docutils">
+<p>The original key1: I’m a <strong>substitution</strong></p>
+<p>I’m <strong>the best substitution</strong></p>
+</div>
+</div>
+</div>
+<div class="section" id="using-substitutions-in-links">
+<h3>Using substitutions in links<a class="headerlink" href="#using-substitutions-in-links" title="Permalink to this headline">¶</a></h3>
+<p>If you’d like to use substitutions to insert and modify <strong>links</strong> in your book, here are two options to explore:</p>
+<ol>
+<li><p><strong>Define the entire markdown link as a variable</strong>. For example:</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="b8141908-7218-47aa-ac9b-ed2fc5f7b4bd" name="02ceb067-3e8c-498a-86ff-6e099e4182a1" type="radio">
+</input><label class="tabbed-label" for="b8141908-7218-47aa-ac9b-ed2fc5f7b4bd">
+Markdown Input</label><div class="tabbed-content docutils">
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">substitutions</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">repo_url</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">my repo url</span><span class="p p-Indicator">]</span><span class="l l-Scalar l-Scalar-Plain">(https://github.com/executablebooks/jupyter-book)</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>Here&#39;s my link: {{ repo_url }}
+</pre></div>
+</div>
+</div>
+<input id="22bf3681-4375-4d61-95bf-41065ba3d61c" name="02ceb067-3e8c-498a-86ff-6e099e4182a1" type="radio">
+</input><label class="tabbed-label" for="22bf3681-4375-4d61-95bf-41065ba3d61c">
+Rendered Output</label><div class="tabbed-content docutils">
+<p>Here’s my link: <a class="reference external" href="https://github.com/executablebooks/jupyter-book">my repo url</a></p>
+</div>
+</div>
+</li>
+<li><p>Use Jinja features to insert the variable.
+Because substitutions use <a class="reference external" href="https://jinja.palletsprojects.com/en/2.11.x/">Jinja templates</a>, you also have access to <strong>Python formatting</strong> operations in your substitution.
+For example:</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="f96cf5b4-f4bd-4899-b6bc-8036b05ffe95" name="2aebcf91-b214-4fb7-b9ec-aa37a0317e2c" type="radio">
+</input><label class="tabbed-label" for="f96cf5b4-f4bd-4899-b6bc-8036b05ffe95">
+Markdown Input</label><div class="tabbed-content docutils">
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">substitutions</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">repo_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">jupyter-book</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>Here&#39;s my link: {{ &#39;[my repo: <span class="sb">`{repo}`</span>](https://github.com/executablebooks/{repo})&#39;.format(repo=repo_name) }}
+</pre></div>
+</div>
+</div>
+<input id="d1e13da1-6665-4f85-a1ad-fc9862f403e2" name="2aebcf91-b214-4fb7-b9ec-aa37a0317e2c" type="radio">
+</input><label class="tabbed-label" for="d1e13da1-6665-4f85-a1ad-fc9862f403e2">
+Rendered Output</label><div class="tabbed-content docutils">
+<p>Here’s my link: <a class="reference external" href="https://github.com/executablebooks/jupyter-book">my repo: <code class="docutils literal notranslate"><span class="pre">jupyter-book</span></code></a></p>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="section" id="citations-and-cross-references">
+<h2>Citations and cross-references<a class="headerlink" href="#citations-and-cross-references" title="Permalink to this headline">¶</a></h2>
+<p>You can add citations and cross-references to your book. See
+<a class="reference internal" href="citations.html"><span class="doc">Citations and bibliographies</span></a> for more information on how to do this.</p>
+</div>
+<div class="section" id="figures">
+<h2>Figures<a class="headerlink" href="#figures" title="Permalink to this headline">¶</a></h2>
+<p>You can thoroughly customise the look of figures in your book. See <a class="reference internal" href="figures.html"><span class="doc">Images and figures</span></a> for
+more information.</p>
+</div>
+<div class="section" id="page-layout-and-sidebar-content">
+<h2>Page layout and sidebar content<a class="headerlink" href="#page-layout-and-sidebar-content" title="Permalink to this headline">¶</a></h2>
+<p>You can also use MyST to control various aspects of the page layout. For more
+information on this, see <a class="reference internal" href="layout.html"><span class="doc">Control the page layout</span></a>.</p>
+</div>
+<div class="section" id="footnotes">
+<h2>Footnotes<a class="headerlink" href="#footnotes" title="Permalink to this headline">¶</a></h2>
+<p>You can include footnotes in your book using standard Markdown syntax.
+This will include a numbered reference to the footnote in-line, and append the footnote
+to a list of footnotes at the bottom of the page.</p>
+<p>To create a footnote, first insert a reference in-line with this syntax: <code class="docutils literal notranslate"><span class="pre">[^mylabel]</span></code>.
+Then, define the text for that label like so:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>[<span class="nl">^mylabel</span>]: <span class="na">My footnote text.</span>
+</pre></div>
+</div>
+<p>You can define <code class="docutils literal notranslate"><span class="pre">[^mylabel]</span></code> anywhere in the page, though its definition will always
+be placed at the bottom of your built page. For example, here’s a footnote <a class="footnote-reference brackets" href="#mynote" id="id1">1</a>
+and here’s another one <a class="footnote-reference brackets" href="#mynote2" id="id2">2</a>. You can click either of them to see the footnotes
+at the bottom of this page.</p>
+</div>
+<div class="section" id="custom-div-blocks">
+<span id="id3"></span><h2>Custom <code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span></code> blocks<a class="headerlink" href="#custom-div-blocks" title="Permalink to this headline">¶</a></h2>
+<p>You can add custom <code class="docutils literal notranslate"><span class="pre">div</span></code> blocks along with whatever classes you’d like using
+the <code class="docutils literal notranslate"><span class="pre">{div}</span></code> directive. The <code class="docutils literal notranslate"><span class="pre">{div}</span></code> directive will wrap everything inside in a single <code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span></code> with the classes you provide. For example:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{div} my-class
+<span class="gs">**Some content.**</span>
+```
+</pre></div>
+</div>
+<p>Will result in the following HTML when your book is built:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;my-class&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Some content.<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>This can be useful if you’d like to style your book with <a class="reference internal" href="../advanced/html.html#custom-assets"><span class="std std-ref">custom CSS or JavaScript</span></a>.</p>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="mynote"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Here’s the text of my first note.</p>
+</dd>
+<dt class="label" id="mynote2"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>And the text of my second note.
+Note that
+<a class="reference external" href="https://executablebooks.org">you can include Markdown footnote definitions</a>.</p>
+</dd>
+</dl>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "executablebooks/jupyter-book",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="myst.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">MyST Markdown overview</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="references.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">References and cross-references</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By The Jupyter Book Community<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
